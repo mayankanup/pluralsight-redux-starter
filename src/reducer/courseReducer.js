@@ -5,6 +5,8 @@ export default function courseReducer(state = [], action) {
         return [...state, 
             Object.assign({}, action.course)
         ];
+        case actionTypes.LOAD_COURSES_SUCCESS:
+        return action.courses;
         default :
         return state;
     }
